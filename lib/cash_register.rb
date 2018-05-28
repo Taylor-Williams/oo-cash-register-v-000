@@ -1,7 +1,7 @@
 class CashRegister
   attr_accessor :total, :discount, :items
 
-  def initialize (discount = 0)
+  def initialize (discount = 0.0)
     @total = 0
     @discount = discount
   end
@@ -11,6 +11,9 @@ class CashRegister
   end
 
   def apply_discount
-    @total = @total - @discount
+    if discount == 0.0 
+      puts "There is no discount to apply."
+    else
+      @total = @total*(@discount/100)
   end
 end

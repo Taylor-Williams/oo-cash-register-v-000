@@ -13,7 +13,7 @@ class CashRegister
       @items << item
       quantity -= 1
     end
-    @last = item
+    @last = cost
   end
 
   def apply_discount
